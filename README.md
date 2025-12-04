@@ -70,7 +70,8 @@ Use it, modify it, or build on it freely.
 ---
 
 ## 🚀 How to View
-Clone this repository: https://blackie001.github.io/Smart-Date-Analyzer/
+Clone this repository: https://blackie001.github.io/Smart-Date-analyzer/
+
 
 You can help me grow by recommending me to your friends, clone this or any of my repository, give it a star, download it and I'll appreciate
 
