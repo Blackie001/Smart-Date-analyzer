@@ -1,0 +1,95 @@
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: "Segoe UI", Tahoma, sans-serif; }
+
+/* CSS variables (will be updated by JS modes) */
+:root {
+    --bg: #f2f2f2;
+    --card: #ffffff;
+    --text: #222222;
+    --accent: #0077ff;
+}
+
+/* Top bar */
+.topbar {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    padding: 14px 24px;
+    background: transparent;
+}
+
+/* Accent color applied to certain controls */
+.color-label input { margin-left: 6px; vertical-align: middle; }
+
+/* Page */
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 30px;
+    transition: background 0.25s, color 0.25s;
+}
+
+/* Container card */
+.container {
+    width: 420px;
+    background: var(--card);
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* Titles & text */
+h1 { margin-bottom: 8px; font-size: 22px; }
+p { margin-bottom: 8px; color: var(--text); }
+
+/* Inputs & buttons */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.08);
+    background: #fff;
+}
+
+button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#themeToggle { background: var(--accent); }
+#funModeBtn { background: var(--accent); }
+
+#result, #additional, #history { margin-top: 12px; text-align: left; }
+
+/* History styling */
+#history h3 { margin: 8px 0 6px 0; font-size: 16px; }
+#history ul { padding-left: 18px; margin: 6px 0; }
+
+/* DARK MODE (class applied on body) */
+body.dark-mode {
+    --bg: #0f0f14;
+    --card: #14151a;
+    --text: #e8eaee;
+    --accent: #21a1f1; /* default dark accent; JS may override */
+}
+
+/* Make title color use accent so color picker changes it */
+#mainTitle { color: var(--accent); }
+
+/* Small responsive */
+@media (max-width: 480px) {
+    .container { width: 92%; padding: 18px; }
+    .topbar { padding: 10px; }
+}
